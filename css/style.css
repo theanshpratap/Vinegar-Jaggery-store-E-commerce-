@@ -1,0 +1,109 @@
+.section {
+    height: 200px;
+    width: 200px;
+    margin: 0px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    /* background-color: aqua; */
+}
+
+.section img {
+    width: 100%;
+}
+
+.footer {
+    min-height: 300px;
+}
+
+.footer img {
+    height: 100px;
+}
+
+.smi {
+    list-style-type: none;
+}
+
+.smi li {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 50%;
+}
+
+#vv {
+    
+    height: fit-content;
+    background-image: url('../images/food.jpeg');
+    background-size: cover;
+
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+.card img {
+    height: 180px;
+    object-fit: cover;
+}
+
+#paymentBox {
+    display: none;
+}
+
+nav.navbar {
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+
+.navbar-nav .nav-link {
+    margin: 0 10px;
+    /* Gap between menu items */
+}
+
+
+/*  */
+
+/* Additional CSS for About and Reviews Sections */
+    .about-hero {
+      background-color: rgba(92, 92, 234, 0.3);
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-content {
+      background-color: #fff3cd; /* Light warning color */
+      padding: 50px 0;
+    }
+    .about-content p {
+      text-align: justify;
+      line-height: 1.6;
+    }
+    .reviews-section {
+      background-color: #e9ecef;
+      padding: 50px 0;
+    }
+    .reviews-section h3 {
+      color: #333;
+      font-weight: bold;
+    }
+    .review-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .review-card .stars {
+      color: #ffc107;
+      font-size: 1.2em;
+    }
+    /* Ensure body has no margins for full-width navbar */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    

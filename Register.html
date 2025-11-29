@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <title>VJ Store</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <!-- outer start -->
+
+        <!-- headline start -->
+        <div class="row bg-warning pt-2">
+            <div class="col-sm-3 pt-2"><i class="fa-solid fa-phone fa-bounce"></i> Call Us: +91 9852651581</div>
+            <div class="col-sm-3 pt-2"><i class="fa-solid fa-envelope fa-shake"></i> Mail Us: email@gmail.com</div>
+            <div class="col-sm-6 text-end">
+                <!-- ====social media icons==== -->
+                <ul class="smi">
+                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-google"></i></li>
+                </ul>
+            </div>
+        </div>
+        <!-- headline end -->
+
+        <!-- navbar start -->
+        <nav class="navbar navbar-expand-lg unique-navbar" style="margin: 0; padding: 0;">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="#">
+                    <img src="images/1.png" alt="Brand Logo" height="50px" class="me-2">
+
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">
+                                <i class="fas fa-home me-1"></i>Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">
+                                <i class="fas fa-info-circle me-1"></i>About Us
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="productpr.html">
+                                <i class="fas fa-box-open me-1"></i>Our Products
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">
+                                <i class="fas fa-sign-in-alt me-1"></i>Login
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Register.html">
+                                <i class="fas fa-user-plus me-1"></i>Register
+                            </a>
+                        </li>
+                        <a href="cart.html" class="nav-link position-relative">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="cartCount"
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                            </span>
+                        </a>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search our site..."
+                            aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">
+                            <i class="fas fa-search" style="color: green;"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar end -->
+
+        <!-- ================= TITLE ================= -->
+        <div class="row">
+            <div class="col-sm-12 bg-warning text-center">
+                <h1 class="fw-bold py-3">Registration Page</h1>
+            </div>
+        </div>
+        <div id="successMsg" class="alert alert-success text-center d-none">
+            🎉 Registration Successful! Thank you for registering.
+        </div>
+
+
+        <!-- ================= REGISTRATION START ================= -->
+        <div class="row mt-5">
+            <div class="col-sm-9 mx-auto border border-2 shadow rounded-3 bg-white">
+                <div class="row">
+
+                    <h1 class="text-center mt-3">Register Here</h1>
+                    <hr />
+
+                    <div class="col-sm-6 border-end">
+                        <img src="images/rest.jpg" class="img-fluid rounded">
+                    </div>
+
+                    <div class="col-sm-6 py-3">
+                        <form class="row g-3">
+
+                            <div class="col-md-6">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Contact No</label>
+                                <input type="number" class="form-control">
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">Address</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">City</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label">State</label>
+                                <select class="form-select">
+                                    <option>---Select State---</option>
+                                    <option>Uttar Pradesh</option>
+                                    <option>Bihar</option>
+                                    <option>Maharashtra</option>
+                                    <option>Delhi</option>
+                                    <option>Punjab</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-2">
+                                <label class="form-label">Pincode</label>
+                                <input type="number" class="form-control">
+                            </div>
+
+                            <div class="col-12 text-center mt-3">
+                                <button type="submit" class="btn btn-primary px-5">Register</button>
+                            </div>
+
+                            <div class="col-12 mt-2">
+                                <input class="form-check-input" type="checkbox"> I agree to receive updates
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-6 text-start">
+                                    <a href="login.html" class="text-decoration-none">Existing User? Login</a>
+                                </div>
+
+                                <div class="col-sm-6 text-end">
+                                    <a href="#" class="text-decoration-none">Forgot Password?</a>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- ================= REGISTRATION END ================= -->
+
+
+        <!-- footer start -->
+        <div class="row bg-dark footer py-5 mt-5">
+            <div class="col-sm-12 text-center text-light">
+
+                <img src="images/2a.png" alt="Brand Logo" class="mb-3" height="70">
+
+                <h4 class="fw-bold">About Our Store</h4>
+                <p class="px-3">
+                    We specialize in high-quality organic vinegars and <br>traditional jaggery products.
+                    Our aim is to provide natural, healthy,<br> and delicious ingredients for your kitchen,
+                    made with care and sourced responsibly.
+                </p>
+
+                <h5 class="mt-4 fw-bold">Contact Us</h5>
+                <p class="m-0">📞 <b>Phone:</b> +91 982255781</p>
+                <p class="m-0">📧 <b>Email:</b> email@gmail.com</p>
+                <p class="mt-0">📍 <b>Location:</b> Main Market, Uttar Pradesh, India</p>
+                <p class="mt-4">
+                    © 2025–2026 All Rights Reserved | Designed & Developed by
+                    <b class="text-warning">Ansh</b>
+                </p>
+
+            </div>
+        </div>
+        <!-- footer end -->
+        <!-- outer end -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.querySelector("form");
+
+                form.addEventListener("submit", function (e) {
+                    e.preventDefault(); 
+
+                
+                    alert("🎉 Registration Successful!\n\nThank you for registering.");
+
+                    form.reset();
+                });
+            });
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.querySelector("form");
+                const successMsg = document.getElementById("successMsg");
+
+                form.addEventListener("submit", function (e) {
+                    e.preventDefault();
+
+                    successMsg.classList.remove("d-none"); 
+
+                    form.reset();
+                });
+            });
+        </script>
+
+    </div>
+</body>
+
+</html>

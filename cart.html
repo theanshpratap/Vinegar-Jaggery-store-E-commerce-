@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <title>VJ Store</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- outer start -->
+
+        <!-- headline start -->
+        <div class="row bg-warning pt-2">
+            <div class="col-sm-3 pt-2"><i class="fa-solid fa-phone fa-bounce"></i> Call Us: +91 9852651581</div>
+            <div class="col-sm-3 pt-2"><i class="fa-solid fa-envelope fa-shake"></i> Mail Us: email@gmail.com</div>
+            <div class="col-sm-6 text-end">
+                <!-- ====social media icons==== -->
+                <ul class="smi">
+                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-google"></i></li>
+                </ul>
+            </div>
+        </div>
+        <!-- headline end -->
+
+        <!-- navbar start -->
+        <nav class="navbar navbar-expand-lg unique-navbar" style="margin: 0; padding: 0;">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="#">
+                    <img src="images/1.png" alt="Brand Logo" height="50px" class="me-2">
+
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">
+                                <i class="fas fa-home me-1"></i>Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">
+                                <i class="fas fa-info-circle me-1"></i>About Us
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="productpr.html">
+                                <i class="fas fa-box-open me-1"></i>Our Products
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">
+                                <i class="fas fa-sign-in-alt me-1"></i>Login
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Register.html">
+                                <i class="fas fa-user-plus me-1"></i>Register
+                            </a>
+                        </li>
+                        <a href="cart.html" class="nav-link position-relative">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="cartCount"
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                            </span>
+                        </a>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search our site..."
+                            aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">
+                            <i class="fas fa-search" style="color: green;"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar end -->
+
+        <!-- cart start -->
+        <div class="container mt-5">
+
+            <h2 class="text-center mb-4">🛒 Your Shopping Cart</h2>
+
+            <!-- Cart Items -->
+            <div class="row" id="cartItems"></div>
+
+            <!-- Total Section -->
+            <div class="mt-4 p-3 bg-white rounded shadow-sm">
+                <h4>Total Amount: ₹ <span id="totalAmount">0</span></h4>
+
+                <button class="btn btn-danger mt-3" onclick="clearCart()">Clear Cart</button>
+                <button class="btn btn-primary mt-3 ms-2" onclick="showPayment()">Proceed to Checkout</button>
+            </div>
+
+            <!-- Payment Section -->
+            <div id="paymentBox" class="mt-4 p-4 bg-white rounded shadow-sm">
+
+                <h3 class="mb-3">💳 Payment Options</h3>
+
+                <!-- COD -->
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="paymethod" id="cod">
+                    <label class="form-check-label" for="cod">Cash on Delivery</label>
+                </div>
+
+                <!-- UPI -->
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="paymethod" id="upi">
+                    <label class="form-check-label" for="upi">UPI Payment</label>
+                </div>
+
+                <input type="text" id="upiid" placeholder="Enter UPI ID (optional)" class="form-control mb-3">
+
+                <!-- Card Payment -->
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="paymethod" id="card">
+                    <label class="form-check-label" for="card">Credit / Debit Card</label>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" placeholder="Card Number">
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" placeholder="MM/YY">
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" placeholder="CVV">
+                    </div>
+                </div>
+
+                <button class="btn btn-success w-100">Pay Now</button>
+            </div>
+
+        </div>
+        <!-- cart end -->
+        <!-- footer start -->
+        <div class="row bg-dark footer py-5 mt-5">
+            <div class="col-sm-12 text-center text-light">
+
+                <img src="images/2a.png" alt="Brand Logo" class="mb-3" height="70">
+
+                <h4 class="fw-bold">About Our Store</h4>
+                <p class="px-3">
+                    We specialize in high-quality organic vinegars and <br>traditional jaggery products.
+                    Our aim is to provide natural, healthy,<br> and delicious ingredients for your kitchen,
+                    made with care and sourced responsibly.
+                </p>
+
+                <h5 class="mt-4 fw-bold">Contact Us</h5>
+                <p class="m-0">📞 <b>Phone:</b> +91 982255781</p>
+                <p class="m-0">📧 <b>Email:</b> email@gmail.com</p>
+                <p class="mt-0">📍 <b>Location:</b> Main Market, Uttar Pradesh, India</p>
+                <p class="mt-4">
+                    © 2025–2026 All Rights Reserved | Designed & Developed by
+                    <b class="text-warning">Ansh</b>
+                </p>
+
+            </div>
+        </div>
+        <!-- footer end -->
+
+        <!-- outer end -->
+    </div>
+
+    <!-- JS Section -->
+    <script>
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        function loadCart() {
+            let cartDiv = document.getElementById("cartItems");
+            let total = 0;
+
+            cartDiv.innerHTML = "";
+
+            cart.forEach((item, index) => {
+                total += item.price * item.qty;
+
+                cartDiv.innerHTML += `
+                <div class="col-md-3 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="${item.image}" class="card-img-top">
+
+                        <div class="card-body">
+                            <h5 class="card-title">₹${item.price}</h5>
+                            <p>${item.name}</p>
+
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <button class="btn btn-sm btn-warning" onclick="decreaseQty(${index})">-</button>
+                                <span><b>${item.qty}</b></span>
+                                <button class="btn btn-sm btn-success" onclick="increaseQty(${index})">+</button>
+                            </div>
+
+                            <button class="btn btn-danger w-100" onclick="removeItem(${index})">
+                                <i class="fa-solid fa-trash"></i> Remove
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            });
+
+            document.getElementById("totalAmount").innerText = total;
+        }
+
+        function increaseQty(i) {
+            cart[i].qty++;
+            saveCart();
+        }
+
+        function decreaseQty(i) {
+            if (cart[i].qty > 1) cart[i].qty--;
+            saveCart();
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            saveCart();
+        }
+
+        function clearCart() {
+            cart = [];
+            saveCart();
+        }
+
+        function saveCart() {
+            localStorage.setItem("cart", JSON.stringify(cart));
+            loadCart();
+        }
+
+        function showPayment() {
+            document.getElementById("paymentBox").style.display = "block";
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+
+        loadCart();
+    </script>
+
+</body>
+
+</html>
